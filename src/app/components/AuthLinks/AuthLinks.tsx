@@ -7,7 +7,7 @@ export default function AuthLinks() {
 	const [open, setOpen] = useState(false);
 
 	// TEMPORARY LOGIN STATUS
-	const status = false;
+	const status = true;
 	return (
 		<>
 			{status ? (

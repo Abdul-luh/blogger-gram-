@@ -3,7 +3,7 @@ import React from "react";
 export default function login() {
 	return (
 		<div className="flex items-center justify-center my-10">
-			<div className="p-10 rounded-xl bg-[var(--softBg)]">
+			<div className="p-10 rounded-xl bg-[var(--softBg)] shadow-md">
 				<div className="py-3 px-4 mb-6 bg-[#ff5555] text-white rounded-md">
 					Sign in With Google
 				</div>
