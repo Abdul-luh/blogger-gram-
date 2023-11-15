@@ -5,14 +5,26 @@ import { FcAddImage, FcVideoFile } from "react-icons/fc";
 import { RiImageAddFill } from "react-icons/ri";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.bubble.css";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 export default function Write() {
 	const [open, setOpen] = useState(true);
 	const [value, setValue] = useState("");
 
+	const { status } = useSession();
+	const route = useRouter();
+
 	const handleOpen = () => {
 		setOpen(!open);
 	};
+
+	if (status === "loading") {
+		return <div className="text-center text-3xl">Loading...</div>;
+	}
+	if (status === "authenticated") {
+		return route.push("/");
+	}
 
 	return (
 		<div>
