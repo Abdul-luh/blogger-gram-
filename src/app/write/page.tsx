@@ -22,7 +22,7 @@ export default function Write() {
 				className="bg-transparent border-none p-2 text-3xl placeholder:text-[#b3b3b1]"
 			/>
 
-			<div className="flex gap-5 h-[700px] text-[var(--textColor)] relative">
+			<div className="flex gap-5 h-[500px] text-[var(--textColor)] relative">
 				<button
 					className="w-10 h-10 rounded-full bg-transparent flex justify-center items-center border-[var(--textColor)] border cursor-pointer my-2"
 					onClick={handleOpen}>
@@ -31,22 +31,22 @@ export default function Write() {
 						// height={60}
 						size={60}
 						onClick={handleOpen}
-						className="w-10 h-10 text-[var(--textColor)]  "
+						className="w-10 h-10"
 					/>
 				</button>
 
 				{open && (
 					<div className="flex gap-4 bg-[var(--bg)] absolute z-50 w-full left-12 ">
 						<button className="w-10 h-10 rounded-full bg-transparent flex justify-center items-center border-[var(--textColor)] border cursor-pointer my-2">
-							<FcAddImage width={60} height={60} />
+							<FcAddImage width={60} height={60} className="w-8 h-8" />
 						</button>
 
 						<button className="w-10 h-10 rounded-full bg-transparent flex justify-center items-center border-[var(--textColor)] border cursor-pointer my-2">
-							<RiImageAddFill width={60} height={60} />
+							<RiImageAddFill width={60} height={60} className="w-8 h-8" />
 						</button>
 
 						<button className="w-10 h-10 rounded-full bg-transparent flex justify-center items-center border-[var(--textColor)] border cursor-pointer my-2">
-							<FcVideoFile width={60} height={60} />
+							<FcVideoFile width={60} height={60} className="w-8 h-8" />
 						</button>
 					</div>
 				)}

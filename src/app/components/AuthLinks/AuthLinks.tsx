@@ -7,7 +7,7 @@ export default function AuthLinks() {
 	const [open, setOpen] = useState(false);
 
 	// TEMPORARY LOGIN STATUS
-	const status = true;
+	const status = false;
 	return (
 		<>
 			{status ? (
@@ -37,7 +37,7 @@ export default function AuthLinks() {
 					{status ? (
 						<>
 							<Link href="/write">Write</Link>
-							<span className="text-">Logout</span>
+							<span className="cursor-pointer">Logout</span>
 						</>
 					) : (
 						<Link href={"/login"}>Login</Link>
