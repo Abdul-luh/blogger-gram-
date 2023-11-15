@@ -1,10 +1,20 @@
 "use client";
 import { signIn, useSession } from "next-auth/react";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
 	const { data, status } = useSession();
 	console.log(data, status);
+
+	const route = useRouter();
+
+	if (status === "loading") {
+		return <div className="">Loading...</div>;
+	}
+	if (status === "authenticated") {
+		return route.push("/");
+	}
 
 	return (
 		<div className="flex items-center justify-center my-10">
