@@ -24,10 +24,14 @@ export default function Login() {
 					className="py-3 px-4 mb-6 bg-[#ff5555] text-center text-white rounded-md">
 					Sign in With Google
 				</div>
-				<div className="py-3 px-4 mb-6 bg-black text-white text-center rounded-md">
+				<div
+					onClick={() => signIn("github")}
+					className="py-3 px-4 mb-6 bg-black text-white text-center rounded-md">
 					Sign in With Github
 				</div>
-				<div className="py-3 px-4 mb-6 bg-[#087bAE] text-white text-center rounded-md">
+				<div
+					onClick={() => signIn("apple")}
+					className="py-3 px-4 mb-6 bg-[#087bAE] text-white text-center rounded-md">
 					Sign in With Facebook
 				</div>
 			</div>
